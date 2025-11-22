@@ -297,3 +297,4 @@ Ab aap apna **Facebook Bulk Scheduler** use kar sakte ho!
 **Made with ❤️ for easy social media management**
 
 **100% Free • 100% Open Source • 100% Reliable**
+# Deployed to Railway
