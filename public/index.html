@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Bulk Scheduler - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-blue-500 to-purple-600 min-h-screen flex items-center justify-center">
+    <div class="container mx-auto px-4">
+        <div class="max-w-md mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+            <!-- Header -->
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-center">
+                <i class="fas fa-calendar-alt text-6xl text-white mb-4"></i>
+                <h1 class="text-3xl font-bold text-white mb-2">Facebook Bulk Scheduler</h1>
+                <p class="text-blue-100">एक साथ multiple pages पर posts schedule करें</p>
+            </div>
+
+            <!-- Content -->
+            <div class="p-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">स्वागत है!</h2>
+                    <p class="text-gray-600 mb-6">
+                        अपने Facebook accounts से login करें और bulk में posts schedule करना शुरू करें
+                    </p>
+                </div>
+
+                <!-- Features -->
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Multiple Accounts</h3>
+                            <p class="text-sm text-gray-600">कई Facebook accounts एक साथ manage करें</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Bulk Upload</h3>
+                            <p class="text-sm text-gray-600">एक बार में 50+ posts schedule करें</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Auto Publish</h3>
+                            <p class="text-sm text-gray-600">Network issues से independent publishing</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Manual Schedule</h3>
+                            <p class="text-sm text-gray-600">हर post का time खुद set करें</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Login Button -->
+                <a href="/auth/facebook" class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-lg transition duration-200 text-center shadow-lg">
+                    <i class="fab fa-facebook mr-2"></i>
+                    Facebook से Login करें
+                </a>
+
+                <p class="text-xs text-gray-500 text-center mt-4">
+                    Login करके आप हमारी Terms और Privacy Policy से सहमत होते हैं
+                </p>
+            </div>
+
+            <!-- Footer -->
+            <div class="bg-gray-50 px-8 py-4 text-center border-t">
+                <p class="text-sm text-gray-600">
+                    <i class="fas fa-lock mr-1"></i>
+                    Secure & Free - 100% Safe
+                </p>
+            </div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="mt-8 text-center text-white">
+            <p class="text-sm opacity-90">
+                <i class="fas fa-info-circle mr-1"></i>
+                यह application Railway.app पर host है - पूरी तरह FREE!
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Check if already logged in
+        fetch('/auth/status')
+            .then(res => res.json())
+            .then(data => {
+                if (data.authenticated) {
+                    window.location.href = '/dashboard';
+                }
+            });
+    </script>
+</body>
+</html>

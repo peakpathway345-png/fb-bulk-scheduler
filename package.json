@@ -1,0 +1,26 @@
+{
+  "name": "fb-bulk-scheduler",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["facebook", "scheduler", "bulk-upload", "social-media"],
+  "author": "Deep Kumar",
+  "license": "MIT",
+  "description": "Facebook bulk post scheduler for multiple accounts and pages",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "multer": "^2.0.2",
+    "node-cron": "^4.2.1",
+    "passport": "^0.7.0",
+    "passport-facebook": "^3.0.0",
+    "pg": "^8.16.3"
+  }
+}
